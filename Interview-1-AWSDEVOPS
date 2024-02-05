@@ -1,0 +1,70 @@
+###AWS INTERVIEW###
+
+Write down the jenkins file ?
+Jenkins 
+Multi stages 
+Stage 1:
+Pull code from scm
+Stage2:
+App server jenkins server 
+
+We will follow agile model we deploy for every 2 weeks..??
+
+We contaneriz the app 
+We have standard templates based on the artifacts and tags we update the templatesss
+Explain docker file
+Difference b/w cmd and entry point
+Diff b/w. Cmd and entry point?
+
+
+We created few resources manually through console but now we want to create them through terraform what should we do???
+We should go to every resource manually and build a state file and a configuration file 
+
+How to connect to Ec2 instance without a public ip??
+How you are managing your infrastructure ??
+Candidate:- baston host (connecting through putty)
+
+Difference b/w CI and CD?
+For example we have a source code and developer is still making changes to the code so to add this to the existing code and check the results with new code and trigger build file..
+
+CD :
+After the build is successful to deploy the packages in to the servers continously we call it as CD
+
+CI PART:
+Scm>>>build to jar file>>build docker image>>push to docker registery 
+CD part:
+Pull image from docker registery>>write kubernetes manifest filesss like pod,deployemenr,replicaset,pv and pvc ,namespaces
+
+What is difference between static volume provisioning and dynamic volume provisioning?
+
+In static we create the persistant volumes manually by giving all the values like storage class and all and we check if it available or not
+But in the dynamic we need not create manually volumes are created automatically 
+
+
+Flow of kubernetes??
+It flows master and worker node architecture 
+Whenever end user sends request api server recieves it and stores the information in the etcd 
+With the help of this the scheduler and controller will deploy the pods on the nodes based on their availability 
+In the worker node we have a kubelet this is a primary node inbetween the master and worker node 
+
+What is the dif b/w selfmanaged kubernetes and normal?
+In self managed we should manage both master and worker where as normal k8s like EKS the master node will be managed by AWS
+
+What are different deployement strategies?
+Recreate and rolling update
+
+In  rolling update when a new version of app is created it will not immediately deployed in the prod in place of older version it will first handled but UAT team after they signoff new version will be deployed
+In. Recreate when a new version is created immediately older one will be deleted and new one will be created
+Blue green deployment:
+Green is the existing environment and blue is the newer version when 
+
+Liveness and readiness probe??
+When we are sending request to a node if the pod and node are helthy and they are ready to serve the request then it is said to be liveness readiness
+Some pod is not ready and had some problem then automatically the pod will restart and become ready
+
+What is deamon set??
+
+When we want to check some app logs and all we use it
+
+What is ingress controller?
+Basically it is a internal load balancer when there are multiple apps hosted in the clusterr
